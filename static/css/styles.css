@@ -1,0 +1,255 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body, html {
+    height: 100%;
+  }
+
+nav {
+  max-width: 1080px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.241) 0%, rgb(255, 255, 255) 1%, rgb(255, 255, 255) 99%, rgba(255, 255, 255, 0.241) 100%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform:uppercase;
+  color: rgba(0, 35, 122, 0.5);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 35, 122, 0.7);
+}
+
+
+.carousel-inner {
+    min-height: 400px; /* Tinggi minimum untuk slide */
+    position: relative; /* Memungkinkan positioning relatif untuk anak elemen */
+    padding-top: 15px;
+  }
+
+  /* Posisi tombol Next dan Previous selalu di tengah vertikal */
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 50%; /* Posisikan di tengah */
+    transform: translateY(-50%); /* Sesuaikan posisi agar tepat di tengah */
+  }
+
+  /* Tambahkan styling untuk ikon tombol */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Background hitam transparan */
+    border-radius: 50%; /* Membuat tombol bulat */
+    padding: 10px; /* Menambah padding untuk ikon */
+  }
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Background lebih gelap saat hover */
+  }
+
+  /* Gambar dalam carousel tetap proporsional */
+  .carousel-item img {
+    max-height: 400px; /* Batasi tinggi maksimum gambar */
+    object-fit: contain; /* Pertahankan proporsi gambar */
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: none; /* Remove the direct background image */
+    position: relative; /* To position the pseudo-element */
+    overflow: auto; /* Prevent scrolling issues */
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/dataset-cover.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(8px); /* Apply the blur effect */
+    z-index: -1; /* Place it behind the content */
+  }
+  
+  .container {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 3%, rgb(255, 255, 255) 97%, rgba(255, 255, 255, 0) 100%);
+    padding: 20px;
+    border-radius: 12px; /* Smooth, rounded corners */
+    max-width: 1000px; /* Limit the width */
+    margin: 50px auto; /* Center the container */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add some depth with shadow */
+    color: #333; /* Text color for good contrast */
+    position: relative; /* To ensure the container is above the blurred background */
+    z-index: 1;
+  }
+
+  table {
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+      width: 70%; /* Optional: adjust table width */
+  }
+  th, td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #ddd;
+  }
+  /* Optional: Add styling for table headers */
+  th {
+      background-color: #f2f2f2;
+  }
+
+
+  h1 {
+    background-color: #3498db; 
+    color:  white; 
+    font-weight: bold;
+    padding: 10px; /* Tambahkan padding agar teks terlihat lebih nyaman */
+    text-align: center; /* Posisikan teks di tengah */
+    border-radius: 8px; /* Opsional: Tambahkan sudut melengkung */
+}
+
+/* Container utama untuk menyambut pengguna */
+.welcome-container {
+  background: linear-gradient(135deg, #e0f7fa, #bbdefb);
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 700px;
+  margin: 50px auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Gaya untuk elemen <h1> */
+.welcome-container h1 {
+   color: white;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+//* Daftar tim */
+.team-list {
+  list-style: none; /* Hilangkan bullet */
+  padding: 0;
+  margin: 0 auto; /* Pusatkan daftar */
+  color: #37474f;
+  font-size: 1.1rem;
+  font-family: 'Poppins', sans-serif; /* Gunakan font Poppins */
+  font-weight: 400; /* Ketebalan normal */
+  display: grid; /* Gunakan grid untuk tata letak */
+  grid-gap: 8px; /* Jarak antar item */
+  max-width: 300px; /* Batas lebar daftar */
+}
+
+.team-list li {
+  display: flex;
+  align-items: center; /* Rata vertikal */
+  gap: 10px; /* Jarak antara ikon dan teks */
+  padding: 10px 15px; /* Ruang dalam */
+  background: linear-gradient(135deg, #e3f2fd, #2e7ab9); /* Warna latar belakang gradient */
+  border-radius: 12px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+  transition: all 0.3s ease; /* Animasi halus */
+}
+
+/* Tambahkan ikon untuk setiap nama */
+.team-list li::before {
+  content: "👤"; /* Gunakan emoji atau ganti dengan ikon lain */
+  font-size: 1.2rem;
+  color: #5c6bc0; /* Warna ikon */
+}
+
+/* Efek hover */
+.team-list li:hover {
+  background: linear-gradient(135deg, #bbdefb, #2e7ab9); /* Ubah warna saat hover */
+  transform: translateY(-2px); /* Efek naik */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar */
+}
+
+/* Gaya untuk paragraf */
+.welcome-container p {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk tautan dataset */
+.dataset-link {
+  display: inline-block; /* Tampilkan sebagai tombol */
+  background-color: #3498db; /* Warna biru */
+  color: #fff; /* Warna teks putih */
+  text-decoration: none; /* Hilangkan underline */
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease; /* Animasi saat hover */
+}
+
+
+.dataset-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+table th, table td {
+  text-align: center;
+  vertical-align: middle;
+}
+#table_sendiri {
+  table-layout: fixed; /* Pastikan kolom memiliki lebar tetap */
+  width: 100%; /* Pastikan tabel menggunakan lebar penuh dari container */
+  word-wrap: break-word; /* Bungkus teks panjang */
+  white-space: normal; /* Izinkan teks membungkus */
+  border-collapse: collapse; /* Gabungkan border tabel */
+}
+
+#table_sendiri th, #table_sendiri td {
+  overflow: hidden; /* Sembunyikan teks yang melebihi kolom */
+  text-overflow: ellipsis; /* Tambahkan "..." untuk teks yang sangat panjang */
+  white-space: normal; /* Bungkus teks */
+  word-wrap: break-word; /* Bungkus teks yang panjang */
+  padding: 8px; /* Tambahkan padding agar lebih nyaman dibaca */
+  vertical-align: middle; /* Ratakan teks di tengah secara vertikal */
+}
+
+.carousel-item {
+  animation: fadeIn 1s ease-in-out; /* Gunakan animasi fadeIn */
+  opacity: 1; /* Pastikan slide aktif terlihat */
+  transform: translateY(0); /* Pastikan posisi tetap */
+}
+
