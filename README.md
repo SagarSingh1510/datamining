@@ -16,8 +16,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This repository is an adapted copy of [Xneine/DataMining](https://github.com/Xneine/DataMining). See the upstream repository for original project history and attribution.
-
 This project analyzes electric vehicle (EV) charging patterns using a dataset from Kaggle. The goal is to uncover trends and patterns in EV charging behaviors, such as time of day, station usage, and user segmentation, and provide insights through an interactive web application built with Flask.
 
 ### Website Functionality
