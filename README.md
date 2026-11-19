@@ -3,9 +3,6 @@
 
   <p align="center">
     Analyzing EV charging patterns using a dataset from Kaggle, providing insights through an interactive web application built with Flask.
-    <br />
-    <a href="https://github.com/Xneine/DataMining"><strong>View upstream project »</strong></a>
-    <br />
   </p>
 </div>
 
